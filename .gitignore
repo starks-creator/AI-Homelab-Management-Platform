@@ -1,0 +1,26 @@
+# Secrets / tokens — never commit
+.action_token
+.discord_webhook
+*.token
+*.key
+*.pem
+.env
+.env.*
+
+# Internal/private config
+**/settings.local.json
+*private*
+*internal*
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.bak
+*.bak-*
+
+# OS / editor cruft
+.DS_Store
+*.swp
