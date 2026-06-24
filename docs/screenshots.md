@@ -34,12 +34,7 @@ A client-side toggle in the top bar redacts sensitive values (Tailscale/LAN IPs,
 
 Example of what gets masked:
 
-| Real value | Displayed in Screenshot Mode |
-|---|---|
-| `100.112.130.85` (Tailscale IP) | `[REDACTED]` |
-| `192.168.1.110` (LAN IP) | `[REDACTED]` |
-| `10:FF:E0:CA:CF:E5` (MAC address) | `[REDACTED]` |
-| `mini-pc` (hostname) | `HOST-01` |
+
 
 ![Jarvis Screenshot Mode](screenshots/screenshot-mode.png)
 
