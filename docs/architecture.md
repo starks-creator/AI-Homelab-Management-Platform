@@ -25,31 +25,24 @@ The environment consists of distinct functional roles rather than a single machi
 4. **Degradation handling** — If any individual host is unreachable, that host is reported as offline rather than causing a failure elsewhere in the system, so the dashboard always reflects the best available picture of the environment.
 
 ```
-            ┌────────────────────────────┐
-            │      Dashboard (Browser)    │
-            └──────────────┬─────────────┘
-                            │ HTTP
-                            ▼
-            ┌────────────────────────────┐
-            │   Jarvis (Mini-PC)          │
-            │   - Status aggregation      │
-            │   - Action dispatch         │
-            │   - Event logging           │
-            └───┬───────────────────┬─────┘
-                │                   │
-     Local data │                   │ SSH over Tailscale
-                ▼                   ▼
-   ┌──────────────────┐   ┌────────────────────────────┐
-   │  AI / Automation  │   │  Dell Server (Media/Storage)│
-   │  services          │   │  Proxmox Host                │
-   │                    │   │  Windows Endpoints            │
-   └──────────────────┘   └────────────────────────────┘
-                            │
-                            ▼
-            ┌────────────────────────────┐
-            │   Automated Reporting       │
-            │   (status summaries)        │
-            └────────────────────────────┘
+Internet
+     │
+AT&T Fiber
+     │
+Flint 2 Router
+     │
+───────────────
+│             │
+Dell Server   Mini-PC (Jarvis)
+│             │
+Jellyfin      Ollama
+ARR           Sentinel
+Docker        Dashboard
+│
+Proxmox Host
+├── Ubuntu VM
+├── Windows VM
+└── pfSense
 ```
 
 ## Monitoring

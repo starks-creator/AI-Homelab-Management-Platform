@@ -43,9 +43,9 @@ Jarvis is a self-hosted monitoring and automation platform for a multi-node home
 
 ![Jarvis dashboard — Proxmox](docs/screenshots/dashboard-proxmox.png)
 
-### AI Brain
+### AI Agent
 
-![Jarvis dashboard — AI Brain](docs/screenshots/dashboard-ai-brain.png)
+![Jarvis dashboard — AI Agent](docs/screenshots/dashboard-ai-agent.png)
 
 ### Actions
 
@@ -68,18 +68,18 @@ AT&T Fiber
      │
 Flint 2 Router
      │
- ────────────────
- │              │
+───────────────
+│             │
 Dell Server   Mini-PC (Jarvis)
- │              │
+│             │
 Jellyfin      Ollama
-ARR Stack     Sentinel
+ARR           Sentinel
 Docker        Dashboard
- │
+│
 Proxmox Host
- ├── Ubuntu VM
- ├── Windows VM
- └── pfSense
+├── Ubuntu VM
+├── Windows VM
+└── pfSense
 ```
 
 ### Machine Roles
